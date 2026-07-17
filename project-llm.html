@@ -18,6 +18,7 @@
   .content-block h2 { font-family: 'Cormorant Garamond', serif; font-size: 28px; color: #c9a96e; margin-bottom: 15px; }
   .content-block ul { padding-left: 20px; margin-top: 10px; }
   .content-block li { margin-bottom: 10px; }
+  .content-block { opacity: 1 !important; transform: translateY(0) !important; }
   .architecture-diagram-placeholder { background: rgba(255,255,255,0.03); border: 1px dashed rgba(255,255,255,0.1); border-radius: 8px; height: 250px; display: flex; align-items: center; justify-content: center; margin: 30px 0; color: rgba(255,255,255,0.4); text-align: center; padding: 20px; }
 </style>
 </head>
@@ -38,12 +39,12 @@
       <span class="tag-item">Automation</span>
     </div>
 
-    <div class="content-block">
+    <div class="content-block reveal">
       <h2>Project Overview</h2>
       <p>When live container clusters experience regression or crash loops, engineers spend valuable time tracking down root causes across thousands of distributed logs. This project designs an intelligent, self-healing orchestration mesh. By pairing deep container log analysis with localized intelligence agents, the architecture parses system failures, suggests direct remediation code blocks, and hooks back into automated deployment pipelines for touchless recovery operations.</p>
     </div>
 
-    <div class="content-block">
+    <div class="content-block reveal">
       <h2>System Architecture &amp; Intelligence Layers</h2>
       <p>The platform runs an integrated multi-step diagnostic and remediation loop:</p>
       <ul>
@@ -61,7 +62,7 @@
       </div>
     </div>
 
-    <div class="content-block">
+    <div class="content-block reveal">
       <h2>Proven Results</h2>
       <ul>
         <li>50% reduction in Mean Time to Recovery (MTTR) for critical, high-priority system incidents.</li>
