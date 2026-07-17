@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autonomous K8s Troubleshooting &amp; LLM Log Analyzer — Deep Dive</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tooplate-stackcraft-style.css">
+<style>
+  .project-detail-body { padding: 120px 20px 60px; max-width: 900px; margin: 0 auto; font-family: 'Outfit', sans-serif; color: rgba(255,255,255,0.8); }
+  .btn-back { display: inline-flex; align-items: center; color: #c9a96e; text-decoration: none; margin-bottom: 40px; font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
+  .btn-back svg { margin-right: 8px; width: 16px; height: 16px; transition: transform 0.2s; }
+  .btn-back:hover svg { transform: translateX(-4px); }
+  .project-title-main { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 500; color: #fff; line-height: 1.2; margin-bottom: 20px; }
+  .tag-container { display: flex; gap: 10px; margin-bottom: 40px; flex-wrap: wrap; }
+  .tag-item { background: rgba(201,169,110,0.1); border: 1px solid rgba(201,169,110,0.2); color: #c9a96e; padding: 4px 12px; border-radius: 4px; font-size: 12px; }
+  .content-block { margin-bottom: 40px; line-height: 1.7; font-size: 16px; }
+  .content-block h2 { font-family: 'Cormorant Garamond', serif; font-size: 28px; color: #c9a96e; margin-bottom: 15px; }
+  .content-block ul { padding-left: 20px; margin-top: 10px; }
+  .content-block li { margin-bottom: 10px; }
+  .architecture-diagram-placeholder { background: rgba(255,255,255,0.03); border: 1px dashed rgba(255,255,255,0.1); border-radius: 8px; height: 250px; display: flex; align-items: center; justify-content: center; margin: 30px 0; color: rgba(255,255,255,0.4); text-align: center; padding: 20px; }
+</style>
+</head>
+<body style="background: #1a1814;">
+
+  <div class="project-detail-body">
+    <a href="index.html#projects" class="btn-back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+      Back to Portfolio
+    </a>
+
+    <h1 class="project-title-main">Autonomous K8s Troubleshooting &amp; LLM Log Analyzer</h1>
+    <div class="tag-container">
+      <span class="tag-item">K8sGPT</span>
+      <span class="tag-item">ArgoCD</span>
+      <span class="tag-item">Local LLMs</span>
+      <span class="tag-item">GitOps</span>
+      <span class="tag-item">Automation</span>
+    </div>
+
+    <div class="content-block">
+      <h2>Project Overview</h2>
+      <p>When live container clusters experience regression or crash loops, engineers spend valuable time tracking down root causes across thousands of distributed logs. This project designs an intelligent, self-healing orchestration mesh. By pairing deep container log analysis with localized intelligence agents, the architecture parses system failures, suggests direct remediation code blocks, and hooks back into automated deployment pipelines for touchless recovery operations.</p>
+    </div>
+
+    <div class="content-block">
+      <h2>System Architecture &amp; Intelligence Layers</h2>
+      <p>The platform runs an integrated multi-step diagnostic and remediation loop:</p>
+      <ul>
+        <li><strong>Continuous Cluster Auditing:</strong> Leverages K8sGPT natively inside the control plane to continuously scan cluster states, identifying container telemetries, failing nodes, and bad deployments.</li>
+        <li><strong>Local AI Reasoning:</strong> Routes raw log error payloads securely to localized Large Language Models (LLMs). The models analyze trace data and quickly pinpoint the root cause.</li>
+        <li><strong>Slack Integration Mesh:</strong> An AI-powered Slack assistant intercepts incoming system crash anomalies in real time, delivering root-cause diagnostics directly to engineering channels.</li>
+        <li><strong>GitOps Auto-Remediation:</strong> If a post-deployment regression pattern is identified, the system acts autonomously, triggering declarative rollbacks via ArgoCD to restore a known stable environment.</li>
+      </ul>
+
+      <div class="architecture-diagram-placeholder">
+        <div>
+          <p><strong>[ Intelligent Self-Healing Pipeline ]</strong></p>
+          <p style="font-size: 13px; color: rgba(255,255,255,0.25); margin-top: 5px;">Crash Loop → K8sGPT Audit → Local LLM Analysis → Slack Notification → ArgoCD Declarative Rollback</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-block">
+      <h2>Proven Results</h2>
+      <ul>
+        <li>50% reduction in Mean Time to Recovery (MTTR) for critical, high-priority system incidents.</li>
+        <li>Fully automated detection and isolation of regression trends across deployment sets.</li>
+        <li>Touchless declarative rollback paths that protect live environments without human engineering dependencies.</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- LINK THE EXISTING THEME SCRIPT HERE -->
+  <script src="tooplate-stackcraft-script.js"></script>
+  
+</body>
+</html>

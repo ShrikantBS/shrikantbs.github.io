@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI-Driven Predictive Autoscaling Engine — Deep Dive</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tooplate-stackcraft-style.css">
+<style>
+  .project-detail-body { padding: 120px 20px 60px; max-width: 900px; margin: 0 auto; font-family: 'Outfit', sans-serif; color: rgba(255,255,255,0.8); }
+  .btn-back { display: inline-flex; align-items: center; color: #c9a96e; text-decoration: none; margin-bottom: 40px; font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
+  .btn-back svg { margin-right: 8px; width: 16px; height: 16px; transition: transform 0.2s; }
+  .btn-back:hover svg { transform: translateX(-4px); }
+  .project-title-main { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 500; color: #fff; line-height: 1.2; margin-bottom: 20px; }
+  .tag-container { display: flex; gap: 10px; margin-bottom: 40px; flex-wrap: wrap; }
+  .tag-item { background: rgba(201,169,110,0.1); border: 1px solid rgba(201,169,110,0.2); color: #c9a96e; padding: 4px 12px; border-radius: 4px; font-size: 12px; }
+  .content-block { margin-bottom: 40px; line-height: 1.7; font-size: 16px; }
+  .content-block h2 { font-family: 'Cormorant Garamond', serif; font-size: 28px; color: #c9a96e; margin-bottom: 15px; }
+  .content-block ul { padding-left: 20px; margin-top: 10px; }
+  .content-block li { margin-bottom: 10px; }
+  .content-block { opacity: 1 !important; transform: translateY(0) !important; }
+  .architecture-diagram-placeholder { background: rgba(255,255,255,0.03); border: 1px dashed rgba(255,255,255,0.1); border-radius: 8px; height: 250px; display: flex; align-items: center; justify-content: center; margin: 30px 0; color: rgba(255,255,255,0.4); text-align: center; padding: 20px; }
+</style>
+</head>
+<body style="background: #1a1814;">
+
+  <div class="project-detail-body">
+    <a href="index.html#projects" class="btn-back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+      Back to Portfolio
+    </a>
+
+    <h1 class="project-title-main">AI-Driven Predictive Autoscaling Engine (AIOps)</h1>
+    <div class="tag-container">
+      <span class="tag-item">KEDA</span>
+      <span class="tag-item">Amazon EKS</span>
+      <span class="tag-item">Python ML</span>
+      <span class="tag-item">Prometheus</span>
+      <span class="tag-item">AIOps</span>
+    </div>
+
+    <div class="content-block reveal">
+      <h2>Project Overview</h2>
+      <p>Traditional Kubernetes autoscaling architectures rely heavily on reactive resource metrics (such as Horizontal Pod Autoscaling evaluating sustained CPU or Memory bounds over a fixed window). While effective for gradual traffic shifts, reactive scaling fails to counter sudden, high-velocity surges. By the time threshold metrics trigger a scale-up operation, the target infrastructure is already experiencing bottleneck-driven lag. This project addresses the metric-lag problem by replacing reactive triggers with proactive, intelligence-driven time-series predictions.</p>
+    </div>
+
+    <div class="content-block reveal">
+      <h2>Architecture &amp; Technical Execution</h2>
+      <p>The solution pairs advanced data sourcing with native Kubernetes event loops:</p>
+      <ul>
+        <li><strong>Telemetry Engine:</strong> Seamlessly pulls live traffic metrics directly from Prometheus telemetry streams into a dedicated Python environment.</li>
+        <li><strong>Predictive Forecast Layer:</strong> Utilizes an unsupervised Machine Learning model running glue-code components to continuously process time-series metrics and project future traffic trends before they arrive.</li>
+        <li><strong>Dynamic Event Injection:</strong> Feeds forecasted metrics into KEDA (Kubernetes Event-driven Autoscaling) via dynamic triggers. This forces preemptive node group expansions on Amazon EKS ahead of anticipated traffic surges.</li>
+      </ul>
+
+      <div class="architecture-diagram-placeholder">
+        <div>
+          <p><strong>[ Telemetry Processing Loop Block ]</strong></p>
+          <p style="font-size: 13px; color: rgba(255,255,255,0.25); margin-top: 5px;">EKS Nodes → Prometheus Metrics → Python ML Logic Engine → KEDA Custom Triggers → Preemptive Scaled State</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-block reveal">
+      <h2>Measured Impact</h2>
+      <ul>
+        <li><strong>40% Latency Mitigation:</strong> Preemptive nodes spin up before load execution vectors hit, reducing cluster response latency by 40%.</li>
+        <li><strong>Neutralized Metric Lag:</strong> Substituted traditional threshold alerts with predictive anomaly signatures, neutralizing metric-lag dropouts entirely.</li>
+        <li><strong>Infrastructure Resilience:</strong> Maintains strict performance curves during simulated stress test profiles without manual platform staging.</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- LINK THE EXISTING THEME SCRIPT HERE -->
+  <script src="tooplate-stackcraft-script.js"></script>
+
+</body>
+</html>
