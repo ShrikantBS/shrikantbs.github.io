@@ -1,9 +1,3 @@
-/*
-Tooplate 2162 StackCraft
-https://www.tooplate.com/view/2162-stackcraft
-Free HTML CSS Template
-*/
-
 (function() {
   'use strict';
 
